@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background: url('./assets/img/texture.png') top left repeat;
+}

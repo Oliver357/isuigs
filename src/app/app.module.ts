@@ -7,33 +7,25 @@ import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-
-import { ProyectoComponent } from './proyecto/proyecto.component';
-import { UsuarioComponent } from './usuario/usuario.component';
-import { EventoComponent } from './evento/evento.component';
-
-/*
+import { EventoModule } from './evento/evento.module';
 import { ProyectoModule } from './proyecto/proyecto.module';
-import { UsuarioModule } from './usuario/usuario.module';*/
+import { UsuarioModule } from './usuario/usuario.module';
+
 import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProyectoComponent,
-    UsuarioComponent,
-    /*EventoComponent,*/
-    PaginaNoEncontradaComponent,
-    EventoComponent
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    /*
+    EventoModule,
     ProyectoModule,
-    UsuarioModule,*/
+    UsuarioModule,
     AppRoutingModule
   ],
   providers: [],
