@@ -1,20 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#"><i class="fab fa-stripe-s"></i> <i class="fab fa-uniregistry"></i> <i class="fas fa-info"></i> <i class="fab fa-google"></i> <i class="fab fa-stripe-s"></i></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="navbar-nav mr-auto">
+					<div class="nav-item">
+						<a class="navbar-brand" routerLink="/evento" routerLinkActive="active">
+							<img src="../../assets/img/events2.png" class="d-inline-block align-center" alt="">
+							Evento
+						</a>
+					</div>
+		      <div class="nav-item">
+		        <a class="navbar-brand" routerLink="/proyecto" routerLinkActive="active">
+							<img src="../../assets/img/project2.png" class="d-inline-block align-center" alt="">
+							Proyecto
+						</a>
+		      </div>
+					<div class="nav-item">
+		        <a class="navbar-brand" routerLink="/usuario" routerLinkActive="active">
+							<img src="../../assets/img/user2.png" class="d-inline-block align-center" alt="">
+							Usuario
+						</a>
+		      </div>
+	    	</div>
+				<form class="form-inline my-2 my-lg-0">
+					<div class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user-circle"></i> Ricardo Guillen</a>
+				    <div class="dropdown-menu">
+				      <a class="dropdown-item" id="-tab" href="#"><i class="fas fa-cog"></i> Configuración</a>
+				      <a class="dropdown-item" id="-tab" href="#"><i class="fas fa-sign-out-alt"></i> Salir</a>
+              <div class="dropdown-divider"></div>
+				      <a class="dropdown-item" id="-tab" href="#"><i class="fas fa-info-circle"></i> Acerca de</a>
+				    </div>
+				  </div>
+		    </form>
+	  	</div>
+		</div>
+	</nav>
+</header>
+
+<body>
+		<div class="container">
+			<section id="body">
+				<router-outlet></router-outlet>
+			</section>
+		</div>
+</body>
+
+<footer id="footer">
+	<div class="container-fluid">
+          SUIGS 2018 &copy; - Ingenieria en Computación <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          <a href="http://www.udo.edu.ve/" target="_blank">Universidad de Oriente</a>
+    </div>
+</footer>

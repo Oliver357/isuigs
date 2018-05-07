@@ -1,0 +1,144 @@
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<ul class="nav nav-tabs">
+				  <li class="nav-item">
+				    <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#usuario/dashboard" role="tab" aria-controls="home" aria-selected="true">
+							<strong>Eventos</strong>
+						</a>
+				  </li>
+				  <li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+				    <div class="dropdown-menu">
+				      <a class="dropdown-item" id="listarClientes-tab" data-toggle="tab" href="#listar-editar-clientes" role="tab" aria-controls="listar-editar-clientes" aria-selected="true"><i class="far fa-user"></i> Listar/Editar</a>
+				      <a class="dropdown-item" id="agregarClientes-tab" data-toggle="tab" href="#agregar-cliente" role="tab" aria-controls="agregar-cliente" aria-selected="false"><i class="fas fa-plus"></i> Agregar</a>
+				      <a class="dropdown-item" id="eliminarClientes-tab" data-toggle="tab" href="#eliminar-cliente" role="tab" aria-controls="eliminar-cliente" aria-selected="false"><i class="fas fa-times"></i> Eliminar</a>
+				    </div>
+				  </li>
+					<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empleados</a>
+				    <div class="dropdown-menu">
+				      <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Listar/Editar</a>
+				      <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Agregar</a>
+				      <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Eliminar</a>
+				    </div>
+				  </li>
+					<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipos</a>
+				    <div class="dropdown-menu">
+				      <a class="dropdown-item" href="#"><i class="fas fa-users"></i> Listar/Editar</a>
+				      <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Crear</a>
+				      <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Eliminar</a>
+				    </div>
+				  </li>
+				</ul>
+
+				<br>
+
+				<div class="tab-content" id="nav-tabContent">
+				  <div class="tab-pane fade show active" id="nav-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+
+						<div class="border rounded">
+						  DASHBOARD
+						</div>
+
+					</div>
+				  <div class="tab-pane fade" id="listar-editar-clientes" role="tabpanel" aria-labelledby="listarClientes-tab">
+
+						<div class="border rounded">
+						  LISTAR
+						</div>
+
+					</div>
+				  <div class="tab-pane fade" id="agregar-cliente" role="tabpanel" aria-labelledby="agregarClientes-tab">
+
+						<div class="border rounded">
+						  AGREGAR
+						</div>
+
+					</div>
+					<div class="tab-pane fade" id="eliminar-cliente" role="tabpanel" aria-labelledby="eliminarClientes-tab">
+
+						<div class="border rounded">
+						  ELIMINAR
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+</section>
+
+
+<!--
+<section id="staff">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+
+
+				<ul class="nav nav-tabs" role="tablist" id="tabUsuarios">
+					<li role="presentation" class="active">
+						<a href="#" aria-controls="" role="tab" data-toggle="tab">
+							<strong>
+								Dashboard
+							</strong>
+						</a>
+					</li>
+
+					<li role="" class="dropdown">
+						<a href="#" id="dusers" role="button" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+                Clientes <span class="caret"></span>
+            </a>
+    				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							<li class="dropdown-item"><a href="#listar-clientes" routerLink="/listar-clientes" routerLinkActive="active"><i class="fa fa-user"></i> Listar/Editar</a></li>
+							<li class="dropdown-item"><a href="#agregar-cliente" routerLink="/agregar-cliente" routerLinkActive="active"><i class="fa fa-plus"></i> Agregar</a></li>
+							<li class="dropdown-item"><a href="#eliminar-cliente" routerLink="/eliminar-cliente" routerLinkActive="active"><i class="fa fa-remove"></i> Eliminar</a></li>
+            </ul>
+					</li>
+
+
+					<li role="" class="dropdown">
+						<a href="#" class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown">
+							Empleados <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="dropdown-item"><a href="#listar-empleados" aria-controls="listar-empleados" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Listar/Editar</a></li>
+							<li class="dropdown-item"><a href="#agregar-empleado" aria-controls="agregar-empleado" role="tab" data-toggle="tab"><i class="fa fa-plus"></i> Agregar</a></li>
+							<li class="dropdown-item"><a href="#eliminar-empleado" aria-controls="eliminar-empleado" role="tab" data-toggle="tab"><i class="fa fa-remove"></i> Eliminar</a></li>
+						</ul>
+					</li>
+
+
+					<li role="" class="dropdown">
+						<a href="#" id="dteams" class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown">
+							Equipos <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+              <li><a href="#listar-equipos"  aria-controls="listar-equipos" role="tab" data-toggle="tab"><i class="fa fa-users"></i> Listar/Editar</a></li>
+							<li><a href="#crear-equipo"  aria-controls="crear-equipo" role="tab" data-toggle="tab"><i class="fa fa-plus"></i> Crear</a></li>
+							<li><a href="#eliminar-equipo"><i class="fa fa-remove"></i> Eliminar</a></li>
+            </ul>
+					</li>
+
+				</ul>
+
+
+				<br>
+
+
+				<div class="tab-content">
+				  <div role="tabpanel" class="panel panel-default tab-pane active" id="dashboard">
+				    <p>BOTONES PRINCIPALES BIEN MOLONES Y EVENTOS DE USUARIOS Y EQUIPOS</p>
+				  </div>
+					<router-outlet></router-outlet>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section> -->

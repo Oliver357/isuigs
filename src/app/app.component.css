@@ -1,0 +1,49 @@
+div .title{
+  color: #039be5;
+  text-align: center;
+}
+
+#body{
+  background: white;
+  min-height: 670px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+nav a {
+  padding: 2px 2px;
+  text-decoration: none;
+  /*margin-top: 10px;*/
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 5px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+nav a img {
+  width: 24px;
+  height: 24px;
+}
+
+#footer{
+	text-align: center;
+	padding: 18px;
+	background: #22313f;
+	color: white;
+}
+#footer a{
+	color: #f5ab35;
+}
+#footer a:hover{
+	color: #f9690e;
+}
