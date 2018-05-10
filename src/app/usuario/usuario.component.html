@@ -2,34 +2,34 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
-				<ul class="nav nav-tabs">
+				<ul class="nav nav-tabs" id="usuario">
 				  <li class="nav-item">
-				    <a class="nav-link active" id="e-usuario" data-toggle="tab" href="#eventos-usuarios" role="tab" aria-controls="home" aria-selected="true">
+				    <a class="nav-link active" id="e-usuario" data-toggle="tab" href="#" routerLink="/usuario" routerLinkActive="active">
 							<strong>Eventos</strong>
 						</a>
 				  </li>
 				  <li class="nav-item dropdown">
-				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+				    <a class="nav-link dropdown-toggle" id="cliente" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
 				    <div class="dropdown-menu">
-				      <a class="dropdown-item" id="listarClientes" data-toggle="tab" href="#" routerLink="listar-clientes" routerLinkActive="active"><i class="far fa-user"></i> Listar/Editar</a>
-				      <a class="dropdown-item" id="agregarCliente" data-toggle="tab" href="#" routerLink="agregar-cliente" routerLinkActive="active"><i class="fas fa-plus"></i> Agregar</a>
-				      <a class="dropdown-item" id="eliminarCliente" data-toggle="tab" href="#" routerLink="eliminar-cliente" routerLinkActive="active"><i class="fas fa-times"></i> Eliminar</a>
+				      <a class="dropdown-item" (click)="activarCliente()" routerLink="listar-clientes" routerLinkActive="active"><i class="far fa-user"></i> Listar/Editar</a>
+				      <a class="dropdown-item" (click)="activarCliente()" routerLink="agregar-cliente" routerLinkActive="active"><i class="fas fa-plus"></i> Agregar</a>
+				      <a class="dropdown-item" (click)="activarCliente()" routerLink="eliminar-cliente" routerLinkActive="active"><i class="fas fa-times"></i> Eliminar</a>
 				    </div>
 				  </li>
 					<li class="nav-item dropdown">
-				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empleados</a>
+				    <a class="nav-link dropdown-toggle" id="empleado" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Empleados</a>
 				    <div class="dropdown-menu">
-				      <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Listar/Editar</a>
-				      <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Agregar</a>
-				      <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Eliminar</a>
+				      <a class="dropdown-item"><i class="fas fa-user"></i> Listar/Editar</a>
+				      <a class="dropdown-item"><i class="fas fa-plus"></i> Agregar</a>
+				      <a class="dropdown-item"><i class="fas fa-times"></i> Eliminar</a>
 				    </div>
 				  </li>
 					<li class="nav-item dropdown">
-				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipos</a>
+				    <a class="nav-link dropdown-toggle" id="equipo" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Equipos</a>
 				    <div class="dropdown-menu">
-				      <a class="dropdown-item" href="#"><i class="fas fa-users"></i> Listar/Editar</a>
-				      <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Crear</a>
-				      <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Eliminar</a>
+				      <a class="dropdown-item"><i class="fas fa-users"></i> Listar/Editar</a>
+				      <a class="dropdown-item"><i class="fas fa-plus"></i> Crear</a>
+				      <a class="dropdown-item"><i class="fas fa-times"></i> Eliminar</a>
 				    </div>
 				  </li>
 				</ul>
@@ -38,43 +38,8 @@
 
 				<router-outlet></router-outlet>
 
-				<!-- <div class="tab-content" id="nav-tabContent">
-				  <div class="tab-pane fade show active" id="eventos-usuarios" role="tabpanel" aria-labelledby="dashboard-tab">
-
-						<app-e-usuario></app-e-usuario>
-
-					</div>
-				  <div class="tab-pane fade" id="listar-editar-clientes" role="tabpanel" aria-labelledby="listarClientes">
-
-						<div class="border rounded">
-						  LISTAR
-						</div>
-
-					</div>
-				  <div class="tab-pane fade" id="agregar-cliente" role="tabpanel" aria-labelledby="agregarCliente">
-
-						<div class="border rounded">
-						  AGREGAR
-						</div>
-
-					</div>
-					<div class="tab-pane fade" id="eliminar-cliente" role="tabpanel" aria-labelledby="eliminarCliente">
-
-						<div class="border rounded">
-						  ELIMINAR
-						</div>
-
-					</div>
-				</div> -->
-
 			</div>
 		</div>
 	 </div>
 
 </section>
-<script type="text/javascript">
-	$('#listarClientes').click(function () {
-		$('#e-usuario').removeClass();
-		$('#listarClientes').removeClass().addClass("active");
-	})
-</script>

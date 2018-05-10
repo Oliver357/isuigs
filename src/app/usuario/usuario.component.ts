@@ -12,4 +12,14 @@ export class UsuarioComponent implements OnInit {
   ngOnInit() {
   }
 
+  public activarCliente(): void{
+    $('#cliente').tab('show');
+  }
+  public activarEmpleado(): void{
+    $('#empleado').tab('show');
+  }
+  public activarEquipo(): void{
+    $('#equipo').tab('show');
+  }
+
 }
