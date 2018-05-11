@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
@@ -10,8 +10,7 @@ import { Cliente } from './cliente';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
+    'Content-Type':  'application/json'
   })
 };
 
@@ -35,8 +34,21 @@ export class ClienteService {
      return this.http.get<Clientes>(this.serverUrl + 'listar_clientes');
   }
 
-/*  public getPermits(): Observable<Permits> {
-    return this.http.get<Permits>(this.serverUrl + 'permits')
-  }*/
+  public agregarCliente2(cliente: Cliente):Observable<Cliente>{
+    return this.http.post<Cliente>(this.serverUrl + 'agregar_cliente', JSON.stringify(cliente), httpOptions);
+  }
+
+  public agregarCliente(path: string, cliente:Cliente):void{
+    this.http.post(SERVER + path, JSON.stringify(cliente), {headers: new HttpHeaders().set('Content-Type','application/json')})
+             .subscribe(data => {},
+                        (err: HttpErrorResponse) => {
+                          if (err.error instanceof Error) {
+                            alert('An error occurred:'+ err.error.message);
+                          }
+                          else {
+                            alert(`Backend returned code ${err.status}, body was: ${err.error}`);
+                          }
+                        });
+  }
 
 }

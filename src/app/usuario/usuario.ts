@@ -1,11 +1,11 @@
 export class Usuario {
 
-  protected id:number;
-  protected nombre: string;
-  protected apellido:string;
-  protected username:string;
-  protected password:string;
-  protected email:string;
+  public id:number;
+  public nombre: string;
+  public apellido:string;
+  public username:string;
+  public password:string;
+  public email:string;
 
 
   constructor(id:number, nombre:string, apellido:string, email:string, username:string, password:string){
