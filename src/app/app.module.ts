@@ -13,7 +13,6 @@ import { UsuarioModule } from './usuario/usuario.module';
 
 import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

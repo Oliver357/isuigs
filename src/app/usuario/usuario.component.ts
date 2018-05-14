@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
@@ -13,13 +15,22 @@ export class UsuarioComponent implements OnInit {
   }
 
   public activarCliente(): void{
-    $('#cliente').tab('show');
+    $("#e-usuario").removeClass("active");
+    $("#empleado").removeClass("active");
+    $("#equipo").removeClass("active");
+    $("#cliente").removeClass("active").addClass("active");
   }
   public activarEmpleado(): void{
-    $('#empleado').tab('show');
+    $("#e-usuario").removeClass("active");
+    $("#cliente").removeClass("active")
+    $("#equipo").removeClass("active");
+    $("#empleado").removeClass("active").addClass("active");;
   }
   public activarEquipo(): void{
-    $('#equipo').tab('show');
+    $("#e-usuario").removeClass("active");
+    $("#cliente").removeClass("active");
+    $("#empleado").removeClass("active");
+    $("#equipo").removeClass("active").addClass("active");
   }
 
 }

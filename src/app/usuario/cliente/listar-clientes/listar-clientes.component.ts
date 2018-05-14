@@ -3,6 +3,8 @@ import { Router} from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente';
 
+import { NgModule }     from '@angular/core';//Borrar si no hace nada
+
 @Component({
   selector: 'app-listar-clientes',
   templateUrl: './listar-clientes.component.html',
