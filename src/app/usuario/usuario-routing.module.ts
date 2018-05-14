@@ -8,6 +8,8 @@ import { ListarClientesComponent } from './cliente/listar-clientes/listar-client
 import { AgregarClienteComponent } from './cliente/agregar-cliente/agregar-cliente.component';
 import { EliminarClienteComponent } from './cliente/eliminar-cliente/eliminar-cliente.component';
 
+import  { DetalleEditarClienteComponent } from './cliente/detalle-editar-cliente/detalle-editar-cliente.component';
+
 const usuarioRoutes: Routes = [
   {
     path: 'usuario',
@@ -15,7 +17,13 @@ const usuarioRoutes: Routes = [
     children: [
       {
         path: 'listar-clientes',
-        component: ListarClientesComponent
+        component: ListarClientesComponent,
+        children:[
+          {
+            path: ':id',
+            component: DetalleEditarClienteComponent
+          }
+        ]
       },
       {
         path: 'agregar-cliente',

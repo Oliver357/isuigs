@@ -19,10 +19,6 @@ export class AgregarClienteComponent implements OnInit {
   ngOnInit() {
   }
 
-  //public agregarCliente():void{
-  //  this.clienteService.agregarCliente("agregar_cliente", this.cliente);
-  //}
-
   public agregarCliente(nombre: string, apellido: string, email: string, username: string, password: string, empresa: string):void{
     nombre = nombre.trim();
     apellido = apellido.trim();
@@ -33,10 +29,15 @@ export class AgregarClienteComponent implements OnInit {
 
     const newCliente: Cliente = { nombre, apellido, email, username, password, empresa } as Cliente;
     this.cliente_service.agregarCliente(newCliente).subscribe();
+    this.gotoListarClientes();
 
-  //  this.cliente = new Cliente(null, nombre, apellido, email, username, password, empresa);
-  //  this.cliente_service.agregarCliente(this.cliente);
-      //.subscribe(cliente => this.cliente.push(Clientes));
+  }
+
+  public gotoListarClientes() {
+    this.router.navigate(['/usuario']);
+  }
+  public cancelar(){
+    this.location.back();
   }
 
   // TODO: Remove this when we're done

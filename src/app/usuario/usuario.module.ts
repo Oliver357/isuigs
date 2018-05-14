@@ -8,6 +8,8 @@ import { EUsuarioComponent } from './e-usuario/e-usuario.component';
 import { ListarClientesComponent } from './cliente/listar-clientes/listar-clientes.component';
 import { AgregarClienteComponent } from './cliente/agregar-cliente/agregar-cliente.component';
 import { EliminarClienteComponent } from './cliente/eliminar-cliente/eliminar-cliente.component';
+import { DetalleEditarClienteComponent } from './cliente/detalle-editar-cliente/detalle-editar-cliente.component';
+import { DetalleEliminarClienteComponent } from './cliente/detalle-eliminar-cliente/detalle-eliminar-cliente.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { EliminarClienteComponent } from './cliente/eliminar-cliente/eliminar-cl
     FormsModule,
     UsuarioRoutingModule
   ],
-  declarations: [UsuarioComponent, EUsuarioComponent, ListarClientesComponent, AgregarClienteComponent, EliminarClienteComponent]
+  declarations: [UsuarioComponent, EUsuarioComponent, ListarClientesComponent, AgregarClienteComponent, EliminarClienteComponent, DetalleEditarClienteComponent, DetalleEliminarClienteComponent]
 })
 export class UsuarioModule { }
