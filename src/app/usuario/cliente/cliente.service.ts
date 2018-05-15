@@ -28,9 +28,13 @@ export class ClienteService {
 
   constructor(private http: HttpClient) { }
 
+  public getClientes(): Observable<Cliente[]> {
+     return this.http.get<Cliente[]>(this.serverUrl + 'listar_clientes');
+  }
+/*
   public getClientes(): Observable<Clientes> {
      return this.http.get<Clientes>(this.serverUrl + 'listar_clientes');
-  }
+  }*/
 
   public agregarCliente (cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(this.serverUrl + 'agregar_cliente', JSON.stringify(cliente), httpOptions);

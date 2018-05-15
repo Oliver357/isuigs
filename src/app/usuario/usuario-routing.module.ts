@@ -20,7 +20,7 @@ const usuarioRoutes: Routes = [
         component: ListarClientesComponent,
         children:[
           {
-            path: ':id',
+            path: 'cliente/:id',
             component: DetalleEditarClienteComponent
           }
         ]
