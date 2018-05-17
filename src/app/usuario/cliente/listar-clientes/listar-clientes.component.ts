@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente';
 
-
+import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-listar-clientes',
@@ -14,24 +14,50 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ListarClientesComponent implements OnInit {
   title = "Lista de Clientes";
-  public clientes : Cliente[];
+  public clientes: Observable<Cliente[]>;
+
+  public cliente$: Cliente[];
+  private selectedId: number;
 
 
-  constructor(private router: Router, private cliente_service: ClienteService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private cliente_service: ClienteService
+  ) {}
 
   ngOnInit() {
+
     this.getClientes();
+
+    //let id = this.route.snapshot.paramMap.get('id');
+    //this.cliente$ = this.cliente_service.getCliente(id);
+  /*this.clientes = this.route.paramMap.pipe(
+    switchMap((params: ParamMap) =>
+      this.cliente_service.getCliente(params.get('id')))
+  );*/
+    //this.getClientes();
+  }
+
+  public getClientesFinal(): Observable<Cliente[]>{
+    return this.clientes = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => {
+        // (+) before `params.get()` turns the string into a number
+        this.selectedId = +params.get('id');
+        return this.cliente_service.getClientes();
+      })
+    );
   }
 
   public getClientes(): void {
     this.cliente_service.getClientes().subscribe(data => {
       console.log(data);
-      this.clientes = data;
-      console.log(this.clientes);
+      this.cliente$ = data;
+      console.log(this.cliente$);
     });
   }
-/*
-  public getClientes(): void {
+
+/*  public getClientes(): void {
     this.cliente_service.getClientes().subscribe(data => {
       console.log(data);
       this.clientes = data.cliente;

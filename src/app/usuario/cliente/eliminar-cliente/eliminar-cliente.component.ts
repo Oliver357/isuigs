@@ -22,9 +22,17 @@ export class EliminarClienteComponent implements OnInit {
   public getClientes(): void {
     this.cliente_service.getClientes().subscribe(data => {
       console.log(data);
-      this.clientes = data.cliente;
+      this.clientes = data;
       console.log(this.clientes);
     });
   }
+
+/*  public getClientes(): void {
+    this.cliente_service.getClientes().subscribe(data => {
+      console.log(data);
+      this.clientes = data.cliente;
+      console.log(this.clientes);
+    });
+  }*/
 
 }
