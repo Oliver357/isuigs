@@ -33,6 +33,7 @@ export class ClienteService {
   public getClientes(): Observable<Cliente[]> {
      return this.http.get<Cliente[]>(this.serverUrl + 'listar_clientes');
   }
+
 /*  public getClientes(): Observable<Clientes> {
      return this.http.get<Clientes>(this.serverUrl + 'listar_clientes');
   }*/

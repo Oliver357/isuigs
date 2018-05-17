@@ -6,7 +6,6 @@ import { Cliente } from '../cliente';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-
 @Component({
   selector: 'app-listar-clientes',
   templateUrl: './listar-clientes.component.html',
@@ -19,6 +18,7 @@ export class ListarClientesComponent implements OnInit {
   public cliente$: Cliente[];
   private selectedId: number;
 
+  public clienteSeleccionado: Cliente;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,8 +27,10 @@ export class ListarClientesComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
-    this.getClientes();
+    this.getClientesFinal();
+    //console.log(this.clientes);
+    //this.getClientesFinal();
+    //console.log(this.clientes);
 
     //let id = this.route.snapshot.paramMap.get('id');
     //this.cliente$ = this.cliente_service.getCliente(id);
@@ -39,21 +41,19 @@ export class ListarClientesComponent implements OnInit {
     //this.getClientes();
   }
 
-  public getClientesFinal(): Observable<Cliente[]>{
-    return this.clientes = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => {
-        // (+) before `params.get()` turns the string into a number
-        this.selectedId = +params.get('id');
-        return this.cliente_service.getClientes();
+  public getClientesFinal(){
+    this.clientes = this.route.paramMap.pipe(switchMap((params: ParamMap) => {
+      this.selectedId = +params.get('id');
+      return this.cliente_service.getClientes();
       })
     );
   }
 
   public getClientes(): void {
     this.cliente_service.getClientes().subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.cliente$ = data;
-      console.log(this.cliente$);
+      //console.log(this.cliente$);
     });
   }
 

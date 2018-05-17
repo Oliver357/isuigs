@@ -1,6 +1,6 @@
 <div class="border rounded">
 
-  <div class="container">
+  <div class="container" *ngIf="cliente | async as cliente">
     <form>
       <br>
       <label class="row justify-content-md-center"><h4>EDITAR CLIENTE</h4></label>

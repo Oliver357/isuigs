@@ -17,6 +17,14 @@ import { DetalleEliminarClienteComponent } from './cliente/detalle-eliminar-clie
     FormsModule,
     UsuarioRoutingModule
   ],
-  declarations: [UsuarioComponent, EUsuarioComponent, ListarClientesComponent, AgregarClienteComponent, EliminarClienteComponent, DetalleEditarClienteComponent, DetalleEliminarClienteComponent]
+  declarations: [
+    UsuarioComponent,
+    EUsuarioComponent,
+    ListarClientesComponent,
+    AgregarClienteComponent,
+    EliminarClienteComponent,
+    DetalleEditarClienteComponent,
+    DetalleEliminarClienteComponent
+  ]
 })
 export class UsuarioModule { }
